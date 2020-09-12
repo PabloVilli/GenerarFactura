@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema targetNamespace="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:mstns="http://www.sat.gob.mx/cfd/3" xmlns="http://www.sat.gob.mx/TimbreFiscalDigital" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://www.sat.gob.mx/TimbreFiscalDigital">
+  <xs:import namespace="http://www.sat.gob.mx/cfd/3" schemaLocation="esquema33FI.xsd" />
+  <xs:element name="TimbreFiscalDigital" msdata:Prefix="tfd">
+    <xs:complexType>
+      <xs:attribute name="Version" form="unqualified" type="xs:string" />
+      <xs:attribute name="UUID" form="unqualified" type="xs:string" />
+      <xs:attribute name="FechaTimbrado" form="unqualified" type="xs:string" />
+      <xs:attribute name="RfcProvCertif" form="unqualified" type="xs:string" />
+      <xs:attribute name="SelloCFD" form="unqualified" type="xs:string" />
+      <xs:attribute name="NoCertificadoSAT" form="unqualified" type="xs:string" />
+      <xs:attribute name="SelloSAT" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

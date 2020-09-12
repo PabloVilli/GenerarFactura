@@ -1,0 +1,108 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="dataSourceInterfac" targetNamespace="http://www.sat.gob.mx/cfd/3" xmlns:mstns="http://www.sat.gob.mx/cfd/3" xmlns="http://www.sat.gob.mx/cfd/3" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://www.sat.gob.mx/TimbreFiscalDigital">
+  <xs:import namespace="http://www.sat.gob.mx/TimbreFiscalDigital" schemaLocation="esquema33FI_app1.xsd" />
+  <xs:element name="Impuestos" msdata:Prefix="cfdi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Traslados" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Traslado" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="Base" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Impuesto" form="unqualified" type="xs:string" />
+                  <xs:attribute name="TipoFactor" form="unqualified" type="xs:string" />
+                  <xs:attribute name="TasaOCuota" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Importe" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="TotalImpuestosTrasladados" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Comprobante" msdata:Prefix="cfdi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Emisor" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Rfc" form="unqualified" type="xs:string" />
+            <xs:attribute name="Nombre" form="unqualified" type="xs:string" />
+            <xs:attribute name="RegimenFiscal" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Receptor" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="Rfc" form="unqualified" type="xs:string" />
+            <xs:attribute name="Nombre" form="unqualified" type="xs:string" />
+            <xs:attribute name="UsoCFDI" form="unqualified" type="xs:string" />
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Conceptos" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Concepto" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="Impuestos" minOccurs="0" maxOccurs="unbounded" />
+                    <xs:element name="Parte" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="ClaveProdServ" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Cantidad" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Unidad" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Descripcion" form="unqualified" type="xs:string" />
+                        <xs:attribute name="ValorUnitario" form="unqualified" type="xs:string" />
+                        <xs:attribute name="Importe" form="unqualified" type="xs:string" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="ClaveProdServ" form="unqualified" type="xs:string" />
+                  <xs:attribute name="NoIdentificacion" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Cantidad" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ClaveUnidad" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Unidad" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Descripcion" form="unqualified" type="xs:string" />
+                  <xs:attribute name="ValorUnitario" form="unqualified" type="xs:string" />
+                  <xs:attribute name="Importe" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element ref="Impuestos" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Complemento" msdata:Prefix="cfdi" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element ref="app1:TimbreFiscalDigital" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Version" form="unqualified" type="xs:string" />
+      <xs:attribute name="Serie" form="unqualified" type="xs:string" />
+      <xs:attribute name="Folio" form="unqualified" type="xs:string" />
+      <xs:attribute name="Fecha" form="unqualified" type="xs:string" />
+      <xs:attribute name="Sello" form="unqualified" type="xs:string" />
+      <xs:attribute name="FormaPago" form="unqualified" type="xs:string" />
+      <xs:attribute name="NoCertificado" form="unqualified" type="xs:string" />
+      <xs:attribute name="Certificado" form="unqualified" type="xs:string" />
+      <xs:attribute name="SubTotal" form="unqualified" type="xs:string" />
+      <xs:attribute name="Moneda" form="unqualified" type="xs:string" />
+      <xs:attribute name="TipoCambio" form="unqualified" type="xs:string" />
+      <xs:attribute name="Total" form="unqualified" type="xs:string" />
+      <xs:attribute name="TipoDeComprobante" form="unqualified" type="xs:string" />
+      <xs:attribute name="MetodoPago" form="unqualified" type="xs:string" />
+      <xs:attribute name="LugarExpedicion" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="dataSourceInterfac" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msdata:Prefix="cfdi">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Impuestos" />
+        <xs:element ref="Comprobante" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

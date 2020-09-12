@@ -1,0 +1,60 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" targetNamespace="http://www.contpaqi.com" xmlns:mstns="http://www.contpaqi.com" xmlns="http://www.contpaqi.com" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" attributeFormDefault="qualified" elementFormDefault="qualified" xmlns:app1="http://www.sat.gob.mx/cfd/3" xmlns:app2="http://www.sat.gob.mx/TimbreFiscalDigital">
+  <xs:import namespace="http://www.sat.gob.mx/TimbreFiscalDigital" schemaLocation="esquema33FI_app2.xsd" />
+  <xs:import namespace="http://www.sat.gob.mx/cfd/3" schemaLocation="esquema33FI_app1.xsd" />
+  <xs:element name="Metadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Document" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Document" form="unqualified">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element ref="app1:Comprobante" />
+                  </xs:sequence>
+                  <xs:attribute name="Type" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MetadataApp" minOccurs="0" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MetadataEstatusApp" form="unqualified">
+                <xs:complexType>
+                  <xs:attribute name="Value" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ValidationStatus" form="unqualified">
+                <xs:complexType>
+                  <xs:attribute name="Value" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="SourceFile" form="unqualified">
+                <xs:complexType>
+                  <xs:attribute name="Value" form="unqualified" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="Version" form="unqualified" type="xs:string" />
+      <xs:attribute name="Hash" form="unqualified" type="xs:string" />
+      <xs:attribute name="Status" form="unqualified" type="xs:string" />
+      <xs:attribute name="TimeStamp" form="unqualified" type="xs:string" />
+      <xs:attribute name="FilePermissions" form="unqualified" type="xs:string" />
+      <xs:attribute name="GuidDocument" form="unqualified" type="xs:string" />
+      <xs:attribute name="Type" form="unqualified" type="xs:string" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Metadata" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
